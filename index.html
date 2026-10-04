@@ -1,0 +1,619 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Gladys A. Alboro â€” Aspiring Software Engineer</title>
+<meta name="description" content="Portfolio of Gladys A. Alboro, BSIT student and aspiring software engineer. Java Swing desktop applications, OOP projects, login interfaces and web development." />
+<meta name="author" content="Gladys A. Alboro" />
+<meta name="theme-color" media="(prefers-color-scheme: light)" content="#f5f9fe" />
+<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#070c16" />
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%232563eb'/%3E%3Ctext x='16' y='22' font-family='monospace' font-size='14' font-weight='bold' fill='%23ffffff' text-anchor='middle'%3EGA%3C/text%3E%3C/svg%3E" />
+<link rel="stylesheet" href="assets/css/styles.css" />
+<script>
+  /* Applied before first paint so the page never flashes the wrong theme. */
+  (function () {
+    try {
+      var saved = localStorage.getItem('alboro-theme');
+      if (saved === 'light' || saved === 'dark') {
+        document.documentElement.setAttribute('data-theme', saved);
+      }
+    } catch (e) {}
+  })();
+</script>
+</head>
+<body>
+
+<a class="skip-link" href="#main">Skip to content</a>
+
+<header class="site-header" id="siteHeader">
+  <nav class="wrap nav" aria-label="Primary">
+    <a class="brand" href="#top">
+      <img class="brand-mark" src="assets/img/profile.jpg" alt="" width="600" height="600" />
+      <span>Gladys&nbsp;A.&nbsp;Alboro</span>
+    </a>
+
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#about">About</a></li>
+      <li><a href="#stack">Stack</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#learning">Learning</a></li>
+      <li><a href="#mindset">Mindset</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+
+    <div class="theme-switch" role="group" aria-label="Colour theme">
+      <button type="button" data-theme-choice="auto" aria-pressed="true" title="Follow my device setting">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="2.5" y="4" width="19" height="12.5" rx="2"/><path d="M8 20.5h8M12 16.5v4"/></svg>
+        <span class="label">Auto</span>
+      </button>
+      <button type="button" data-theme-choice="light" aria-pressed="false" title="Light theme">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4.2"/><path d="M12 2.5v2.2M12 19.3v2.2M4.2 4.2l1.6 1.6M18.2 18.2l1.6 1.6M2.5 12h2.2M19.3 12h2.2M4.2 19.8l1.6-1.6M18.2 5.8l1.6-1.6"/></svg>
+        <span class="label">Light</span>
+      </button>
+      <button type="button" data-theme-choice="dark" aria-pressed="false" title="Dark theme">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 14.5A8.5 8.5 0 1 1 9.5 4a7 7 0 0 0 10.5 10.5Z"/></svg>
+        <span class="label">Dark</span>
+      </button>
+    </div>
+
+    <button class="nav-toggle" id="navToggle" type="button" aria-expanded="false" aria-controls="navLinks" aria-label="Menu">&#9776;</button>
+  </nav>
+</header>
+
+<main id="main">
+
+  <!-- ============ HERO ============ -->
+  <section class="hero" id="top">
+    <div class="wrap hero-inner">
+      <div>
+        <span class="eyebrow">Developer Portfolio</span>
+
+        <div class="identity">
+          <img class="avatar" src="assets/img/profile.jpg" alt="Gladys A. Alboro" width="600" height="600" />
+          <div>
+            <h1><span class="name">Gladys A. Alboro</span></h1>
+            <p class="hero-role">
+              <span>2nd Year BSIT Student</span>
+              <span class="dot">&bull;</span>
+              <span>Aspiring Software Engineer</span>
+            </p>
+          </div>
+        </div>
+
+        <p class="hero-lede">
+          Hi, I'm Gladys. I build small software projects to learn software development properly â€”
+          desktop applications in Java, object-oriented programs, and web pages. I'm still early in
+          my journey, and I'd rather show you working code than make claims I'm not ready to back up.
+        </p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="https://github.com/gladysalboro-svg">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 .5a11.5 11.5 0 0 0-3.64 22.41c.58.1.79-.25.79-.56v-2c-3.2.7-3.88-1.54-3.88-1.54-.53-1.34-1.29-1.7-1.29-1.7-1.05-.72.08-.71.08-.71 1.16.08 1.77 1.2 1.77 1.2 1.03 1.77 2.7 1.26 3.36.96.1-.75.4-1.26.73-1.55-2.55-.29-5.24-1.28-5.24-5.7 0-1.26.45-2.29 1.19-3.1-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.18 1.18a11 11 0 0 1 5.8 0c2.2-1.5 3.17-1.18 3.17-1.18.63 1.59.23 2.76.12 3.05.74.81 1.18 1.84 1.18 3.1 0 4.43-2.69 5.4-5.25 5.69.41.36.78 1.06.78 2.14v3.17c0 .31.21.67.8.56A11.5 11.5 0 0 0 12 .5Z"/></svg>
+            GitHub Profile
+          </a>
+          <a class="btn" href="mailto:gladys_alboro@sjp2cd.edu.ph">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M2 5.5A1.5 1.5 0 0 1 3.5 4h17A1.5 1.5 0 0 1 22 5.5v13a1.5 1.5 0 0 1-1.5 1.5h-17A1.5 1.5 0 0 1 2 18.5Zm.9.4 8.1 5.9 8.1-5.9"/></svg>
+            Email Me
+          </a>
+          <a class="btn" href="#projects">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5.5h16M4 12h16M4 18.5h10"/></svg>
+            View Projects
+          </a>
+        </div>
+      </div>
+
+      <aside class="code-card" aria-label="Code excerpt from the Simple_POS project">
+        <div class="code-card-head">
+          <span></span><span></span><span></span>
+          <span class="file">NewJFrame.java &mdash; excerpt</span>
+        </div>
+        <pre><code><span class="c">// PAY button: work out the customer's change</span>
+<span class="k">double</span> TOT      = Double.valueOf(total.getText());
+<span class="k">double</span> Cash     = Double.valueOf(CASH.getText());
+<span class="k">double</span> Balance  = Cash - TOT;
+
+DecimalFormat df = <span class="k">new</span> DecimalFormat(<span class="s">"00.00"</span>);
+Bal.setText(String.valueOf(df.format(Balance)));</code></pre>
+      </aside>
+    </div>
+  </section>
+
+  <!-- ============ ABOUT ============ -->
+  <section class="section" id="about">
+    <hr class="rule" />
+    <div class="wrap">
+      <div class="section-head">
+        <span class="eyebrow">01 &mdash; About</span>
+        <h2>Learning software development the practical way</h2>
+      </div>
+
+      <div class="grid grid-2">
+        <div class="card reveal">
+          <div class="card-icon">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3 2 8l10 5 10-5-10-5Z"/><path d="M5 10.5V16c0 1.7 3.1 3 7 3s7-1.3 7-3v-5.5"/></svg>
+          </div>
+          <h3>What I study</h3>
+          <p>
+            Bachelor of Science in Information Technology (BSIT). My focus right now is the
+            fundamentals: control flow, functions, data structures, and object-oriented ideas such
+            as classes, encapsulation, and events. I like the part where an idea turns into
+            something you can actually click.
+          </p>
+        </div>
+
+        <div class="card reveal">
+          <div class="card-icon">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v18M5 8l7-5 7 5"/><path d="M4 20h16"/></svg>
+          </div>
+          <h3>How I work</h3>
+          <p>
+            I build small projects on purpose. None of them are large, but each one taught me
+            something a tutorial could not &mdash; for example, that a hardcoded file path works on
+            your own machine and nowhere else. I welcome feedback and new challenges.
+          </p>
+        </div>
+
+        <div class="card reveal">
+          <div class="card-icon">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.5 2"/></svg>
+          </div>
+          <h3>What I'm looking for</h3>
+          <p>
+            Entry-level Software Engineering roles, internships, or junior developer opportunities
+            where I can keep learning and contribute to real work. I'm open to feedback and to
+            technologies I haven't met yet.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ STACK ============ -->
+  <section class="section" id="stack">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="eyebrow">02 &mdash; Stack</span>
+        <h2>Technologies I have worked with</h2>
+        <p>
+          These are the tools I actually use. My level in all of them is beginner to
+          early-intermediate &mdash; I build with them, and I am still learning them properly.
+        </p>
+      </div>
+
+      <div class="grid grid-2">
+        <div class="card">
+          <div class="stack-group">
+            <p class="stack-label">Languages</p>
+            <div class="chips">
+              <span class="chip">C++</span>
+              <span class="chip">Java</span>
+              <span class="chip">PHP</span>
+              <span class="chip">HTML5</span>
+              <span class="chip">CSS3</span>
+            </div>
+          </div>
+          <div class="stack-group">
+            <p class="stack-label">Tools &amp; platforms</p>
+            <div class="chips">
+              <span class="chip">Git</span>
+              <span class="chip">GitHub</span>
+              <span class="chip">Visual Studio</span>
+              <span class="chip">VS Code</span>
+              <span class="chip">Canva</span>
+              <span class="chip">NetBeans IDE</span>
+              <span class="chip">Apache Maven</span>
+              <span class="chip">Microsoft Office</span>
+            </div>
+          </div>
+          <p class="faint mt-2">
+            Java is the language I have the most project evidence in. C++ and PHP are technologies
+            I am working with; their repositories are not public yet.
+          </p>
+        </div>
+
+        <div class="card">
+          <p class="stack-label">Where I am right now &mdash; self-assessed</p>
+          <ul class="progress-list">
+            <li>Java (Swing / OOP)<span class="bar"><i style="width:45%"></i></span></li>
+            <li>HTML &amp; CSS<span class="bar"><i style="width:35%"></i></span></li>
+            <li>C++<span class="bar"><i style="width:25%"></i></span></li>
+            <li>PHP<span class="bar"><i style="width:15%"></i></span></li>
+            <li>C#<span class="bar"><i style="width:10%"></i></span></li>
+          </ul>
+          <p class="faint mt-2">
+            These bars are my own honest self-assessment of learning progress, not a proficiency
+            or test score.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ PROJECTS ============ -->
+  <section class="section" id="projects">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="eyebrow">03 &mdash; Projects</span>
+        <h2>What I have built so far</h2>
+        <p>
+          Every description below was written from the actual source code. Where a link is still
+          missing, it is marked instead of being faked.
+        </p>
+      </div>
+
+      <div class="grid grid-2">
+
+        <article class="card project featured reveal">
+          <div class="project-top">
+            <div>
+              <h3>Simple_POS</h3>
+              <p class="faint">Point-of-sale desktop application</p>
+            </div>
+            <span class="tag">Java OOP</span>
+          </div>
+
+          <div class="chips">
+            <span class="chip">Java</span>
+            <span class="chip">Swing</span>
+            <span class="chip">JTable</span>
+            <span class="chip">NetBeans</span>
+            <span class="chip">AbsoluteLayout</span>
+          </div>
+
+          <p>
+            A working desktop cashier application. Six menu items appear as image buttons; clicking
+            one increments its quantity and adds it to an order table. The app recalculates the
+            total automatically, removes items, works out the customer's change, and produces a
+            printable receipt.
+          </p>
+
+          <p class="skills">
+            <strong>Key skills:</strong> classes and methods &middot; event handling with
+            <code>ActionListener</code> &middot; table models and row manipulation &middot;
+            <code>Vector</code> row data &middot; <code>DecimalFormat</code> money formatting
+            &middot; <code>switch</code> &middot; array iteration &middot;
+            <code>try/catch</code> &middot; layout managers
+          </p>
+
+          <div class="shots">
+            <a href="assets/img/simple-pos/simple-pos-1.jpg" target="_blank" rel="noopener">
+              <img src="assets/img/simple-pos/simple-pos-1.jpg" alt="Simple_POS application window, screenshot 1" loading="lazy" width="600" height="452" />
+            </a>
+            <a href="assets/img/simple-pos/simple-pos-2.jpg" target="_blank" rel="noopener">
+              <img src="assets/img/simple-pos/simple-pos-2.jpg" alt="Simple_POS application window, screenshot 2" loading="lazy" width="613" height="458" />
+            </a>
+          </div>
+          <p class="shot-note">Real screenshots from the running app &mdash; click to open full size. Captions pending.</p>
+
+          <div class="project-links">
+            <a class="link-btn" href="https://drive.google.com/file/d/1rHQCIlQ3mZq7PYDlSJFsvS7OTgj0_o5w/view?usp=classroom_web&amp;authuser=0" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 4h6v6M20 4l-8.5 8.5M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></svg>
+              Project file (Drive)
+            </a>
+            <span class="link-btn is-missing" aria-disabled="true">View Repository &mdash; link pending</span>
+          </div>
+
+          <p class="verify">
+            Heads up: this file is shared through Google Classroom, so it opens a Google sign-in
+            page for anyone who is not already permitted. Set the file's sharing to
+            &ldquo;Anyone with the link&nbsp;&rarr;&nbsp;Viewer&rdquo; before sending this portfolio
+            to recruiters.
+          </p>
+        </article>
+
+        <article class="card project featured reveal">
+          <div class="project-top">
+            <div>
+              <h3>Login &amp; Sign-Up Interface</h3>
+              <p class="faint">Authentication UI</p>
+            </div>
+            <span class="tag">Java</span>
+          </div>
+
+          <div class="chips">
+            <span class="chip">Java</span>
+            <span class="chip">Swing</span>
+            <span class="chip">Maven</span>
+            <span class="chip">JPasswordField</span>
+          </div>
+
+          <p>
+            A login and sign-up interface with a split-panel layout, an image panel, and navigation
+            between the two screens. Built to understand how an authentication screen is structured
+            before connecting it to a backend.
+          </p>
+
+          <p class="skills">
+            <strong>Key skills:</strong> Maven project structure &middot; multiple windows and frame
+            navigation &middot; password input handling &middot; images loaded from the classpath
+            &middot; NetBeans Form editor
+          </p>
+
+          <div class="shots shots--single">
+            <a href="assets/img/login/login-photo-2.jpg" target="_blank" rel="noopener">
+              <img src="assets/img/login/login-photo-2.jpg" alt="Screenshot from the Login project" loading="lazy" width="1200" height="750" />
+            </a>
+          </div>
+          <p class="shot-note">Screenshot from the project &mdash; click to open full size. Caption pending.</p>
+
+          <div class="project-links">
+            <a class="link-btn" href="https://gladysalboro-lgtm.github.io/sam/main.html" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 4h6v6M20 4l-8.5 8.5M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></svg>
+              Web Demo
+            </a>
+            <a class="link-btn" href="https://drive.google.com/file/d/1uKO7dDHs-3GAuUm_FYa9D742dMmwlhID/view?usp=classroom_web&amp;authuser=0" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 4h6v6M20 4l-8.5 8.5M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></svg>
+              Project file (Drive)
+            </a>
+            <span class="link-btn is-missing" aria-disabled="true">Repository &mdash; link pending</span>
+          </div>
+
+          <p class="verify">
+            Needs verification: the live demo is hosted under the account
+            <code>gladysalboro-lgtm</code>. Confirm whether it is the web version of this Java
+            project or a separate web project.
+          </p>
+
+          <p class="verify">
+            Heads up: the Drive file is shared through Google Classroom, so it opens a Google
+            sign-in page for anyone who is not already permitted. Set its sharing to
+            &ldquo;Anyone with the link&nbsp;&rarr;&nbsp;Viewer&rdquo; before sending this portfolio
+            to recruiters.
+          </p>
+        </article>
+
+        <article class="card project reveal">
+          <div class="project-top">
+            <div>
+              <h3>Developer Portfolio</h3>
+              <p class="faint">This website</p>
+            </div>
+            <span class="tag">Web</span>
+          </div>
+          <div class="chips">
+            <span class="chip">HTML5</span>
+            <span class="chip">CSS3</span>
+            <span class="chip">JavaScript</span>
+          </div>
+          <p>
+            The page you are reading. Hand-written semantic HTML and CSS, custom properties for
+            light and dark themes, a system-aware theme switch that remembers your choice, and
+            reduced-motion support.
+          </p>
+          <p class="skills"><strong>Key skills:</strong> responsive layout &middot; CSS custom
+            properties &middot; accessible focus states &middot; <code>localStorage</code>
+            persistence &middot; <code>prefers-color-scheme</code></p>
+
+          <div class="shots shots--single">
+            <a href="assets/img/portfolio/portfolio-screenshot.jpg" target="_blank" rel="noopener">
+              <img src="assets/img/portfolio/portfolio-screenshot.jpg" alt="Screenshot of this developer portfolio" loading="lazy" width="1200" height="800" />
+            </a>
+          </div>
+          <p class="shot-note">Click to open full size. Caption pending.</p>
+          <div class="project-links">
+            <a class="link-btn" href="https://github.com/gladysalboro-svg">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 19c-4.3 1.4-4.3-2.5-6-3m12 5v-3.5c0-1 .1-1.4-.5-2 2.8-.3 5.5-1.4 5.5-6a4.6 4.6 0 0 0-1.3-3.2 4.2 4.2 0 0 0-.1-3.2s-1.1-.3-3.5 1.3a12 12 0 0 0-6.2 0C6.5 2.8 5.4 3.1 5.4 3.1a4.2 4.2 0 0 0-.1 3.2A4.6 4.6 0 0 0 4 9.5c0 4.6 2.7 5.7 5.5 6-.6.6-.6 1.2-.5 2V21"/></svg>
+              Source of this site
+            </a>
+          </div>
+        </article>
+
+        <article class="card project reveal">
+          <div class="project-top">
+            <div>
+              <h3>NSTP Memories</h3>
+              <p class="faint">National Service Training Program documentation</p>
+            </div>
+            <span class="tag">Documentation</span>
+          </div>
+          <div class="chips">
+            <span class="chip">Documentation</span>
+            <span class="chip">Canva</span>
+          </div>
+          <p>
+            A photo record from my NSTP activity, kept as a reminder of the program. Four photos are
+            published below.
+          </p>
+          <p class="verify">
+            Needs verification: the event name, dates, and what I actually produced or did during
+            the program, so this can be described accurately.
+          </p>
+          <div class="project-links">
+            <span class="link-btn is-missing" aria-disabled="true">Write-up &mdash; pending</span>
+          </div>
+        </article>
+
+      </div>
+
+      <div class="gallery mt-3">
+        <figure>
+          <img src="assets/img/nstp/nstp-1.jpg" alt="NSTP photo 1" loading="lazy" width="1280" height="960" />
+          <figcaption>NSTP &mdash; caption pending</figcaption>
+        </figure>
+        <figure>
+          <img src="assets/img/nstp/nstp-2.jpg" alt="NSTP photo 2" loading="lazy" width="1280" height="960" />
+          <figcaption>NSTP &mdash; caption pending</figcaption>
+        </figure>
+        <figure>
+          <img src="assets/img/nstp/nstp-3.jpg" alt="NSTP photo 3" loading="lazy" width="1280" height="960" />
+          <figcaption>NSTP &mdash; caption pending</figcaption>
+        </figure>
+        <figure>
+          <img src="assets/img/nstp/nstp-4.jpg" alt="NSTP photo 4" loading="lazy" width="1280" height="960" />
+          <figcaption>NSTP &mdash; caption pending</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ LEARNING ============ -->
+  <section class="section" id="learning">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="eyebrow">04 &mdash; Currently Learning</span>
+        <h2>Building the foundation first</h2>
+        <p>These are the things I am actively working on &mdash; not things I have mastered.</p>
+      </div>
+
+      <ul class="learning-grid">
+        <li>Programming fundamentals &mdash; variables, control flow, functions, arrays, file handling</li>
+        <li>Java &mdash; going past the basics into collections, file I/O, and separating logic from the UI</li>
+        <li>C++ &mdash; small console programs to get comfortable with the language</li>
+        <li>C# &mdash; starting now, to see the same OOP ideas in another ecosystem</li>
+        <li>PHP &mdash; connecting forms to a database and handling user input safely</li>
+        <li>Web development &mdash; semantic HTML, modern CSS layout, responsive design</li>
+        <li>Software engineering concepts &mdash; version control discipline, separating concerns, readable code</li>
+        <li>Git &amp; GitHub workflow &mdash; branches, meaningful commits, issues, pull requests</li>
+        <li>Practical project building &mdash; finishing, documenting and deploying something end to end</li>
+        <li>Project documentation &mdash; writing a README that explains what a project does and how to run it</li>
+        <li>Clean, maintainable code &mdash; removing hardcoded values, naming things clearly</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ============ MINDSET ============ -->
+  <section class="section" id="mindset">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="eyebrow">05 &mdash; Developer Mindset</span>
+        <h2>Development is a loop, not a straight line</h2>
+      </div>
+
+      <div class="mindset">
+        <p class="loop">
+          <span>Learn it</span><i>&rarr;</i>
+          <span>Build it</span><i>&rarr;</i>
+          <span>Break it</span><i>&rarr;</i>
+          <span>Understand why</span><i>&rarr;</i>
+          <span>Fix it</span><i>&rarr;</i>
+          <span>Try again</span>
+        </p>
+        <p class="muted" style="max-width:60ch;margin-inline:auto">
+          Most of what I know now, I know because something did not work and I had to find out why.
+          That is not a detour from the work &mdash; that is the work. Every broken build is a concept
+          finally becoming clear.
+        </p>
+
+        <div class="values mt-4">
+          <div class="value">
+            <strong>Perseverance</strong>
+            <p>The first version being wrong is expected. I keep going until it works.</p>
+          </div>
+          <div class="value">
+            <strong>Continuous learning</strong>
+            <p>I don't want to be "done". I want to be getting better.</p>
+          </div>
+          <div class="value">
+            <strong>Honest documentation</strong>
+            <p>If a feature is not finished, the README says so. I would rather be accurate than impressive.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CONTACT ============ -->
+  <section class="section" id="contact">
+    <div class="wrap">
+      <div class="contact-card">
+        <span class="eyebrow">06 &mdash; Contact</span>
+        <h2>Let's talk</h2>
+        <p class="muted" style="max-width:52ch;margin-inline:auto">
+          Open to entry-level Software Engineering roles, internships, and junior developer
+          opportunities &mdash; and happy to learn. If you spotted something in my code that could
+          be better, please tell me.
+        </p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="mailto:gladys_alboro@sjp2cd.edu.ph">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M2 5.5A1.5 1.5 0 0 1 3.5 4h17A1.5 1.5 0 0 1 22 5.5v13a1.5 1.5 0 0 1-1.5 1.5h-17A1.5 1.5 0 0 1 2 18.5Zm.9.4 8.1 5.9 8.1-5.9"/></svg>
+            gladys_alboro@sjp2cd.edu.ph
+          </a>
+          <a class="btn" href="https://github.com/gladysalboro-svg">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 .5a11.5 11.5 0 0 0-3.64 22.41c.58.1.79-.25.79-.56v-2c-3.2.7-3.88-1.54-3.88-1.54-.53-1.34-1.29-1.7-1.29-1.7-1.05-.72.08-.71.08-.71 1.16.08 1.77 1.2 1.77 1.2 1.03 1.77 2.7 1.26 3.36.96.1-.75.4-1.26.73-1.55-2.55-.29-5.24-1.28-5.24-5.7 0-1.26.45-2.29 1.19-3.1-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.18 1.18a11 11 0 0 1 5.8 0c2.2-1.5 3.17-1.18 3.17-1.18.63 1.59.23 2.76.12 3.05.74.81 1.18 1.84 1.18 3.1 0 4.43-2.69 5.4-5.25 5.69.41.36.78 1.06.78 2.14v3.17c0 .31.21.67.8.56A11.5 11.5 0 0 0 12 .5Z"/></svg>
+            github/gladysalboro-svg
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <span><strong>Gladys A. Alboro</strong> &mdash; BSIT Student &middot; Aspiring Software Engineer</span>
+    <span>Built with semantic HTML and custom-property CSS. <em>Still learning, still building.</em></span>
+  </div>
+</footer>
+
+<script>
+  /* ---------- Theme: Auto / Light / Dark ---------- */
+  (function () {
+    var STORAGE_KEY = 'alboro-theme';
+    var root = document.documentElement;
+    var buttons = Array.prototype.slice.call(document.querySelectorAll('[data-theme-choice]'));
+
+    function current() {
+      return root.getAttribute('data-theme') || 'auto';
+    }
+
+    function apply(choice) {
+      if (choice === 'light' || choice === 'dark') {
+        root.setAttribute('data-theme', choice);
+      } else {
+        root.removeAttribute('data-theme');
+      }
+      try {
+        if (choice === 'auto') {
+          localStorage.removeItem(STORAGE_KEY);
+        } else {
+          localStorage.setItem(STORAGE_KEY, choice);
+        }
+      } catch (e) {}
+      buttons.forEach(function (btn) {
+        btn.setAttribute('aria-pressed', String(btn.dataset.themeChoice === current()));
+      });
+    }
+
+    buttons.forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        apply(btn.dataset.themeChoice);
+      });
+    });
+
+    apply(current());
+  })();
+
+  /* ---------- Mobile navigation ---------- */
+  (function () {
+    var toggle = document.getElementById('navToggle');
+    var links = document.getElementById('navLinks');
+    if (!toggle || !links) return;
+
+    toggle.addEventListener('click', function () {
+      var open = links.classList.toggle('is-open');
+      toggle.setAttribute('aria-expanded', String(open));
+    });
+
+    links.addEventListener('click', function (evt) {
+      if (evt.target.tagName === 'A') {
+        links.classList.remove('is-open');
+        toggle.setAttribute('aria-expanded', 'false');
+      }
+    });
+  })();
+
+  /* ---------- Header shadow on scroll ---------- */
+  (function () {
+    var header = document.getElementById('siteHeader');
+    if (!header) return;
+    var onScroll = function () {
+      header.classList.toggle('is-stuck', window.scrollY > 8);
+    };
+    onScroll();
+    window.addEventListener('scroll', onScroll, { passive: true });
+  })();
+</script>
+
+</body>
+</html>
