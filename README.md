@@ -267,3 +267,5 @@ BSIT Student · Aspiring Software Engineer
 *"Still learning, still building."*
 
 </div>
+#   A L B O R O  
+ 
